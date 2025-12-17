@@ -1,0 +1,147 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Empty Page */
+body {
+    background: #F5F5F5;
+    font-family: 'Source Sans 3', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.page {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frame 21 */
+.frame {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(20px, 5vw, 80px);
+    gap: 16px;
+    
+    width: 100%;
+    max-width: 560px;
+    height: fit-content;
+    
+    /* White */
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    
+    /* Ensure frame fits within viewport */
+    max-height: calc(100vh - 40px);
+}
+
+/* Logo Vertical 1 */
+.logo-vertical {
+    width: 109px;
+    height: 64px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.logo-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Coming Soon */
+.title {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    
+    /* H1/48/Bold */
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.25;
+    /* identical to box height, or 125% */
+    text-align: center;
+    letter-spacing: -0.02em;
+    
+    /* Neutral/900 */
+    color: #1A1A1A;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    
+    margin: 0;
+}
+
+/* Khatulistiwa Air — Private aircraft charter service, delivering seamless and refined air travel. */
+.description {
+    width: 100%;
+    max-width: 400px;
+    
+    /* Body lg/18/Regular */
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    line-height: 1.5;
+    /* or 156% */
+    text-align: center;
+    
+    /* Neutral/500 */
+    color: #757575;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    
+    margin: 0;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .frame {
+        padding: clamp(15px, 8vw, 60px);
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+    
+    .frame {
+        padding: clamp(10px, 10vw, 40px);
+    }
+    
+    .title {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+}
